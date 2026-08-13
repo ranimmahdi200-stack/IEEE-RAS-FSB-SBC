@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE RAS Student Chapter | Robotics & Automation Society</title>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="video-only">
+
+    <!-- Background video (replace "background.mp4" with your file) -->
+    <video id="bg-video" autoplay muted loop playsinline preload="auto">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <!-- Canvas for Particle Background -->
+    <canvas id="bg-canvas"></canvas>
+    <div id="page-overlay"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-brand">
+                <span class="logo-text-ieee">IEEE</span>
+                <span class="logo-text-ras">RAS</span>
+                <span class="logo-sub">FSB Student Branch Chapter</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="#socials" class="nav-link">Platforms</a></li>
+                <li class="nav-item"><a href="#activities" class="nav-link">Activities</a></li>
+                <li class="nav-item"><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#events" class="nav-link">Events</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. HOME SECTION -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="branding-logos">
+                <img src="ras.png" alt="IEEE RAS Logo" class="brand-logo ras-logo animated-img">
+            </div>
+            <h2 class="tech-tag">INNOVATING THE FUTURE</h2>
+            <h1 class="hero-title">IEEE Robotics & Automation Society</h1>
+            <h3 class="hero-subtitle">Student Branch Chapter — FSB</h3>
+            <p class="hero-desc">
+                Pioneering innovation through robotics, artificial intelligence, and automation. We empower students to build real-world engineering solutions.
+            </p>
+            <div class="hero-cta">
+                <a href="#about" class="btn btn-primary"><i class="fas fa-compass"></i> Discover Us</a>
+                <a href="#team" class="btn btn-secondary"><i class="fas fa-users"></i> Meet Our Team</a>
+                <a href="#activities" class="btn btn-outline"><i class="fas fa-microchip"></i> Explore Activities</a>
+            </div>
+        </div>
+            <div class="hero-visual">
+            <div class="hero-bg-movers" aria-hidden="true">
+                <span class="mover mover-1"></span>
+                <span class="mover mover-2"></span>
+                <span class="mover mover-3"></span>
+                <span class="mover mover-4"></span>
+                <span class="mover mover-5"></span>
+                <span class="mover mover-6"></span>
+            </div>
+            <div class="hero-animated-layer" aria-hidden="true">
+                <span class="anim-line a"></span>
+                <span class="anim-line b"></span>
+                <span class="anim-orbit o1"></span>
+                <span class="anim-orbit o2"></span>
+                <span class="anim-spark s1"></span>
+                <span class="anim-spark s2"></span>
+                <!-- Robotics-themed SVG gears + scanning beam -->
+                <div class="robotics-bg" aria-hidden="true">
+                    <svg class="gear g1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <g>
+                            <path d="M50 30 L58 30 L62 24 L70 26 L74 20 L82 26 L86 34 L92 36 L92 44 L96 50 L92 56 L92 64 L86 66 L82 74 L74 70 L70 76 L62 78 L58 72 L50 72 L42 72 L38 78 L30 76 L26 70 L18 74 L14 66 L8 64 L8 56 L4 50 L8 44 L8 36 L14 34 L18 26 L26 20 L30 26 L38 24 L42 30 Z" fill="none" stroke="rgba(95,33,103,0.06)" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="18" fill="rgba(95,33,103,0.08)" stroke="rgba(168,50,70,0.14)" stroke-width="1.6"/>
+                        </g>
+                    </svg>
+                    <svg class="gear g2" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <g>
+                            <path d="M50 22 L58 20 L62 14 L70 16 L74 10 L82 16 L86 24 L92 26 L92 34 L96 40 L92 46 L92 54 L86 56 L82 64 L74 60 L70 66 L62 68 L58 62 L50 62 L42 62 L38 68 L30 66 L26 60 L18 64 L14 56 L8 54 L8 46 L4 40 L8 34 L8 26 L14 24 L18 16 L26 10 L30 16 L38 14 L42 20 Z" fill="none" stroke="rgba(95,33,103,0.04)" stroke-width="1.8"/>
+                            <circle cx="50" cy="50" r="12" fill="rgba(168,50,70,0.06)" stroke="rgba(95,33,103,0.12)" stroke-width="1"/>
+                        </g>
+                    </svg>
+                    <svg class="gear g3" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <g>
+                            <path d="M50 36 L56 36 L60 32 L66 34 L70 30 L76 34 L80 40 L86 42 L86 48 L90 50 L86 52 L86 58 L80 60 L76 66 L70 62 L66 68 L60 66 L56 62 L50 62 L44 62 L40 66 L34 68 L30 62 L24 66 L20 60 L14 58 L14 52 L10 50 L14 48 L14 42 L20 40 L24 34 L30 30 L34 34 L40 32 L44 36 Z" fill="none" stroke="rgba(95,33,103,0.05)" stroke-width="1.4"/>
+                            <circle cx="50" cy="50" r="8" fill="rgba(95,33,103,0.06)" stroke="rgba(95,33,103,0.08)" stroke-width="0.8"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. WHO WE ARE -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Who We Are</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text glass-card">
+                    <h3>Empowering Tomorrow's Engineers</h3>
+                    <p><strong>IEEE Robotics and Automation Society – FSB Student Branch Chapter</strong>is a community of passionate students driven by robotics, automation, embedded systems, artificial intelligence, and emerging technologies.
+
+Our chapter brings together students who want to learn, build, innovate, and share knowledge through hands-on projects, technical workshops, competitions, training sessions, and collaborative activities.
+
+We believe that robotics is not only about technology — it is about creativity, teamwork, problem-solving, and turning ideas into real-world solutions.</p>
+                    
+                    <div class="about-sub-grid">
+                        <div class="sub-card">
+                            <i class="fas fa-bullseye"></i>
+                            <h4>Our Mission</h4>
+                            <p>To create an inspiring environment where students can develop their technical and soft skills, explore the world of robotics and automation, and transform their ideas into innovative projects.</p>
+                        </div>
+                        <div class="sub-card">
+                            <i class="fas fa-eye"></i>
+                            <h4>Our Vision</h4>
+                            <p>To build a strong robotics community that inspires innovation, empowers students, and connects them with the future of technology.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-user-astronaut"></i>
+                        <h3 class="counter" data-target="15">0</h3>
+                        <p>Active Members</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3 class="counter" data-target="0">0</h3>
+                        <p>Events Organized</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3 class="counter" data-target="5">0</h3>
+                        <p>Workshops Hosted</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h3 class="counter" data-target="1">0</h3>
+                        <p>Years Active</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. OUR TEAM -->
+    <section id="team" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Team 2026/2027</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">The driving force behind our chapter's vision and technological endeavors.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Member Card Placeholder 1 -->
+                <div class="team-card glass-card">
+                    <div class="member-img-box">
+                        <img src="samar.png" alt="Samar Rouahi" class="animated-img parallax-img">
+                        <span class="badge">Executive Board</span>
+                    </div>
+                    <div class="member-info">
+                        <h3>Samar Rouahi</h3>
+                        <p class="role">Chapter Chair</p>
+                        <div class="member-socials">
+                            <a href="https://www.linkedin.com/in/samar-rouahi-05094238b/"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:samarrouahi3@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member Card Placeholder 2 -->
+                <div class="team-card glass-card">
+                    <div class="member-img-box">
+                        <img src="elaa.png" alt="Elaa Turki" class="animated-img parallax-img">
+                        <span class="badge">Executive Board</span>
+                    </div>
+                    <div class="member-info">
+                        <h3>Elaa Turki</h3>
+                        <p class="role">Vice Chair</p>
+                        <div class="member-socials">
+                            <a href="https://www.linkedin.com/in/elaa-turki-420a88217/"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:elaa.turki@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member Card Placeholder 3 -->
+                <div class="team-card glass-card">
+                    <div class="member-img-box">
+                        <img src="lina.png" alt="Lina Khayati" class="animated-img parallax-img">
+                        <span class="badge">Executive Board</span>
+                    </div>
+                    <div class="member-info">
+                        <h3>Lina Khayati</h3>
+                        <p class="role">Secretary</p>
+                        <div class="member-socials">
+                            <a href="https://www.linkedin.com/in/lina-khayati-512452373/"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:linakhayati20@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Member Card Placeholder 4 -->
+                <div class="team-card glass-card">
+                    <div class="member-img-box">
+                        <img src="ranim.jpg" alt="Ranim Mahdi" class="animated-img parallax-img">
+                        <span class="badge">Executive Board</span>
+                    </div>
+                    <div class="member-info">
+                        <h3>Ranim Mahdi</h3>
+                        <p class="role">Webmaster</p>
+                        <div class="member-socials">
+                            <a href="https://www.linkedin.com/in/ranim-mahdi-76890b360/"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:ranimmahdi200@gmail.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Member Card Placeholder 5 -->
+                <div class="team-card glass-card">
+                    <div class="member-img-box">
+                        <img src="nour.png" alt="Nour Limem" class="animated-img parallax-img">
+                        <span class="badge">Executive Board</span>
+                    </div>
+                    <div class="member-info">
+                        <h3>Nour Limem</h3>
+                        <p class="role">Treasurer</p>
+                        <div class="member-socials">
+                            <a href="[LINK_LINKEDIN]"><i class="fab fa-linkedin"></i></a>
+                            <a href="mailto:[EMAIL]"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. OFFICIAL PAGES / SOCIAL MEDIA -->
+    <section id="socials" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Official Platforms</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">Connect with our community across all official channels.</p>
+            </div>
+
+            <div class="platforms-grid">
+                <div class="platform-card glass-card">
+                    <i class="fab fa-linkedin platform-icon"></i>
+                    <h3>LinkedIn</h3>
+                    <p>Professional updates, project showcases, and career opportunities.</p>
+                    <a href="https://www.linkedin.com/company/ieee-ras-chapter-fsb-student-branch/?" target="_blank" class="btn btn-sm">Follow Us</a>
+                </div>
+
+                <div class="platform-card glass-card">
+                    <i class="fab fa-instagram platform-icon"></i>
+                    <h3>Instagram</h3>
+                    <p>Behind-the-scenes, event highlights, and active community stories.</p>
+                    <a href="https://www.instagram.com/ieee.ras.fsb/" target="_blank" class="btn btn-sm">Follow Us</a>
+                </div>
+
+                <div class="platform-card glass-card">
+                    <i class="fab fa-facebook platform-icon"></i>
+                    <h3>Facebook</h3>
+                    <p>Official announcements, photo albums, and event pages.</p>
+                    <a href="https://www.facebook.com/profile.php?id=61590487647070" target="_blank" class="btn btn-sm">Like Page</a>
+                </div>
+
+                <div class="platform-card glass-card">
+                    <i class="fab fa-tiktok platform-icon"></i>
+                    <h3>Tiktok</h3>
+                    <p>Recorded technical sessions, project demos, and competition vlogs.</p>
+                    <a href="https://www.tiktok.com/@ieee.ras.fsb.sbc?is_from_webapp=1&sender_device=pc" target="_blank" class="btn btn-sm">Subscribe</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. OUR ACTIVITIES -->
+    <section id="activities" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Activities & Initiatives</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Bootcamp">Bootcamps</button>
+                <button class="filter-btn" data-filter="competitions">Competitions</button>
+                <button class="filter-btn" data-filter="Workshops">Workshops</button>
+            </div>
+
+            <div class="activities-grid">
+                <!-- Activity Item 1 -->
+                <div class="activity-card glass-card" data-category="Bootcamp">
+                    <div class="activity-img-placeholder"><img src="BOOTCAMP.png" alt="BOOT" class="BOOT animated-img parallax-img glow-border"></div>
+                    <div class="activity-content">
+                        <span class="category-tag">Bootcamp</span>
+                        <h3>CYBERTRON BOOTCAMP</h3>
+                        <p class="activity-date"><i class="far fa-calendar-alt"></i> 11-20,07,2026</p>
+                        <p>Intensive hands-on training on Robot Operating System (ROS) and hardware integration.</p>
+                        <a href="bootcamp.html" class="btn btn-outline btn-sm">View Details</a>
+                    </div>
+                </div>
+
+                <!-- Activity Item 2 -->
+                <div class="activity-card glass-card" data-category="competitions">
+                    <div class="activity-img-placeholder">SOON</div>
+                    <div class="activity-content">
+                        <span class="category-tag">Competition</span>
+                        <p class="activity-date"><i class="far fa-calendar-alt"></i>SOON</p>
+                        <button class="btn btn-outline btn-sm modal-trigger" data-modal="modal2">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Activity Item 3 -->
+                <div class="activity-card glass-card" data-category="Workshops">
+                    <div class="activity-img-placeholder">SOON</div>
+                    <div class="activity-content">
+                        <span class="category-tag">Workshops</span>
+                        <p class="activity-date"><i class="far fa-calendar-alt"></i>SOON</p>
+                        <button class="btn btn-outline btn-sm modal-trigger" data-modal="modal3">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ACHIEVEMENTS -->
+    <!--<section id="achievements" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Key Achievements</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-year">[YEAR_PLACEHOLDER]</span>
+                        <h3>1st Place — National Robotics Challenge</h3>
+                        <p>Our technical team secured top position with an AI-driven obstacle-avoidance rover.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-year">[YEAR_PLACEHOLDER]</span>
+                        <h3>IEEE Regional Exemplary Chapter Award</h3>
+                        <p>Recognized for outstanding technical contribution, community impact, and student engagement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. GALLERY -->
+    <!--<section id="gallery" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Event Gallery</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item glass-card" onclick="openLightbox('[IMAGE_URL_PLACEHOLDER]')">
+                    <div class="gallery-placeholder"><i class="fas fa-camera"></i> <span>[EVENT_PHOTO_1]</span></div>
+                </div>
+                <div class="gallery-item glass-card" onclick="openLightbox('[IMAGE_URL_PLACEHOLDER]')">
+                    <div class="gallery-placeholder"><i class="fas fa-camera"></i> <span>[EVENT_PHOTO_2]</span></div>
+                </div>
+                <div class="gallery-item glass-card" onclick="openLightbox('[IMAGE_URL_PLACEHOLDER]')">
+                    <div class="gallery-placeholder"><i class="fas fa-camera"></i> <span>[EVENT_PHOTO_3]</span></div>
+                </div>
+                <div class="gallery-item glass-card" onclick="openLightbox('[IMAGE_URL_PLACEHOLDER]')">
+                    <div class="gallery-placeholder"><i class="fas fa-camera"></i> <span>[EVENT_PHOTO_4]</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content-box">
+            <p id="lightbox-caption">Photo View Placeholder</p>
+        </div>
+    </div>
+
+    <!-- Bootcamp Sessions Modal -->
+    <div id="modal1" class="lightbox" onclick="closeModal(event)">
+        <span class="close-lightbox" onclick="closeModal(event)">&times;</span>
+        <div class="lightbox-content-box" onclick="event.stopPropagation()">
+            <h3>Bootcamp Sessions</h3>
+            <ul class="bootcamp-sessions">
+                <li><strong>Session 1 — FUNDAMENTALS OF ROBOTICS</strong> By Mr.Louay Sahbani</li>
+                <li><strong>Session 2 — The Embedded Blueprint</strong> By Mr.Mohamed Kada</li>
+                <li><strong>Session 3 — The Language Behind Smart Devices</strong> By Mr. Mohamed Amine Louati</li>
+                <li><strong>Session 4 — The IoT Odyssey</strong> By Mr.Baha Eddine Hammou</li>
+                <li><strong>Session 5 — COMPUTER VISION FOR ROBOTICS </strong> By Ms. Imen Masmoudi</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Competition Modal -->
+    <div id="modal2" class="lightbox" onclick="closeModal(event)">
+        <span class="close-lightbox" onclick="closeModal(event)">&times;</span>
+        <div class="lightbox-content-box" onclick="event.stopPropagation()">
+            <h3>National Autonomous Robotics Hackathon</h3>
+            <p><strong>Format:</strong> 24-hour onsite competition focused on autonomous navigation and task completion.</p>
+            <p><strong>Highlights:</strong> Team-based challenges, judging criteria, and prizes for top performers.</p>
+            <p>Contact the events team to register your participation and get the detailed rulebook.</p>
+        </div>
+    </div>
+
+    <!-- AI & IoT Activity Modal -->
+    <div id="modal3" class="lightbox" onclick="closeModal(event)">
+        <span class="close-lightbox" onclick="closeModal(event)">&times;</span>
+        <div class="lightbox-content-box" onclick="event.stopPropagation()">
+            <h3>Computer Vision for Autonomous Drones</h3>
+            <p><strong>Overview:</strong> Workshop covering OpenCV basics, model deployment, and real-time drone perception.</p>
+            <p><strong>Takeaways:</strong> Datasets, example code, and a hands-on demo session for participants.</p>
+            <p>Sign up to receive the code examples and demo videos after the session.</p>
+        </div>
+    </div>
+
+    <!-- 8. EVENTS / NEWS -->
+    <!-- <section id="events" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Events & News</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card glass-card">
+                    <div class="event-date-badge">
+                        <span class="day">[DAY]</span>
+                        <span class="month">[MONTH]</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Annual Recruitment Drive</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> [LOCATION_PLACEHOLDER]</p>
+                        <p>Join IEEE RAS to unlock access to hands-on labs, global competitions, and technical workshops.</p>
+                        <a href="#join" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="event-card glass-card">
+                    <div class="event-date-badge">
+                        <span class="day">[DAY]</span>
+                        <span class="month">[MONTH]</span>
+                    </div>
+                    <div class="event-details">
+                        <h3>Bootcamp: Autonomous Navigation</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> [LOCATION_PLACEHOLDER]</p>
+                        <p>3-day immersive bootcamp covering LiDAR mapping, SLAM algorithms, and ROS simulation.</p>
+                        <a href="#join" class="btn-text">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. JOIN US (CTA) -->
+    <section id="join" class="cta-section">
+        <div class="container">
+            <div class="cta-card glass-card">
+                <h2>Ready to Shape the Future of Robotics?</h2>
+                <p>Become part of a passionate network of student engineers, researchers, and tech enthusiasts.</p>
+                <a href="https://forms.gle/Um23A4VsM9TAgjFY6" target="_blank" class="btn btn-primary btn-large">
+                    <i class="fas fa-paper-plane"></i> Apply for Membership
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. CONTACT -->
+    <section id="contact" class="section-padding bg-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info glass-card">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:ras-fsb@ieee.tn">ras-fsb@ieee.tn</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-facebook"></i>
+                        <p><a href="https://www.facebook.com/profile.php?id=61590487647070" target="_blank" rel="noopener">Facebook — IEEE RAS FSB</a></p>
+                    </div>
+                        <div class="info-item">
+                            <i class="fab fa-linkedin"></i>
+                            <p><a href="https://www.linkedin.com/company/ieee-ras-chapter-fsb-student-branch/" target="_blank" rel="noopener">LinkedIn — IEEE RAS FSB</a></p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-instagram"></i>
+                            <p><a href="https://www.instagram.com/ieee.ras.fsb/" target="_blank" rel="noopener">Instagram — @ieee.ras.fsb</a></p>
+                        </div>
+                </div>
+
+                <div class="map-card glass-card">
+                    <h3>Our Location</h3>
+                    <p class="map-address">Faculté des Sciences de Bizerte — 37.2669776, 9.8802341</p>
+                    <div id="contact-map" class="map-container">
+                        <iframe src="https://www.google.com/maps?q=37.2669776,9.8802341&z=17&output=embed" style="border:0;width:100%;height:100%;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <p style="margin-top:0.8rem;"><a href="https://www.google.com/maps/place/Facult%C3%A9+des+Sciences+de+Bizerte/@37.2669818,9.8776592,694m/data=!3m2!1e3!4b1!4m6!3m5!1s0x12e31fcabaf83cd1:0x2e1cd92f29a2fa27!8m2!3d37.2669776!4d9.8802341!16s%2Fg%2F1tgm022d?entry=ttu&g_ep=EgoyMDI2MDgxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn btn-sm btn-outline">Open in Maps</a></p>
+                </div>
+
+                <form class="contact-form glass-card" onsubmit="handleFormSubmit(event)">
+                    <h3>Send Us a Message</h3>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 IEEE Robotics & Automation Society Student Chapter — FSB . All Rights Reserved.</p>
+            <p class="sub-footer">Designed for innovation, technical excellence, and youth empowerment.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

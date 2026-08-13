@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybertron Bootcamp — Sessions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="video-only">
+    <!-- Background video (replace "background.mp4" with your file) -->
+    <video id="bg-video" autoplay muted loop playsinline preload="auto">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <canvas id="bg-canvas"></canvas>
+    <div id="page-overlay"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <span class="logo-text-ieee">IEEE</span>
+                <span class="logo-text-ras">RAS</span>
+                <span class="logo-sub">FSB Student Branch Chapter</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="index.html#team" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="index.html#activities" class="nav-link active">Activities</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+    </nav>
+
+    <main class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cybertron Bootcamp</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">A curated set of hands-on sessions to build robotics expertise — ROS, embedded systems, CV, IoT and more.</p>
+            </div>
+
+            <div class="bootcamp-grid">
+                <div class="glass-card session-card">
+                    <div class="session-media glow-border">
+                        <img src="1.png" alt="Fundamentals of Robotics" class="animated-img parallax-img" loading="lazy">
+                    </div>
+                    <div class="session-info">
+                        <h3>Session 1 — FUNDAMENTALS OF ROBOTICS</h3>
+                        <p><strong>Instructor:</strong> Mr. Louay Sahbani</p>
+                        <p>Learn the core concepts of robotics from an experienced electrical engineer and former IEEE RAS Chair, and build a strong foundation for the sessions ahead.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card session-card">
+                    <div class="session-media glow-border">
+                        <img src="2.png" alt="The Embedded Blueprint" class="animated-img parallax-img" loading="lazy">
+                    </div>
+                    <div class="session-info">
+                        <h3>Session 2 — The Embedded Blueprint</h3>
+                        <p><strong>Instructor:</strong> Mr. Mohamed Kada</p>
+                        <p> Learn from an industry expert and strengthen your embedded systems knowledge.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card session-card">
+                    <div class="session-media glow-border">
+                        <img src="3.png" alt="Language Behind Smart Devices" class="animated-img parallax-img" loading="lazy">
+                    </div>
+                    <div class="session-info">
+                        <h3>Session 3 — The Language Behind Smart Devices</h3>
+                        <p><strong>Instructor:</strong> Mr. Mohamed Amine Louati</p>
+                        <p>The Language Behind Smart Devices, where Mr. Mohamed Amine Louati, Embedded Software Engineer at Sagemcom and IEEE RAS Tunisia Section Chapter Secretary, will guide you through the fundamentals of Embedded C and its role in embedded systems.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card session-card">
+                    <div class="session-media glow-border">
+                        <img src="4.png" alt="The IoT Odyssey" class="animated-img parallax-img" loading="lazy">
+                    </div>
+                    <div class="session-info">
+                        <h3>Session 4 — The IoT Odyssey</h3>
+                        <p><strong>Instructor:</strong> Mr. Baha Eddine Hammou</p>
+                        <p>M. Baha Eddine Hammou, qui vous guidera à travers le monde de l'Internet des choses, partageant des analyses pratiques et des expériences réelles dans les systèmes embâssés et l'IoT.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card session-card">
+                    <div class="session-media glow-border">
+                        <img src="5.png" alt="Computer Vision for Robotics" class="animated-img parallax-img" loading="lazy">
+                    </div>
+                    <div class="session-info">
+                        <h3>Session 5 — COMPUTER VISION FOR ROBOTICS</h3>
+                        <p><strong>Instructor:</strong> Ms. Imen Masmoudi</p>
+                        <p> Computer Vision for Robotics and discover how robots can see, analyze, and understand the world around them.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card session-card">
+                    <div class="session-media glow-border">
+                        <img src="IEEE RAS FSB SB.png" alt="Bootcamp Materials" class="animated-img parallax-img" loading="lazy">
+                    </div>
+                    <div class="session-info">
+                        <h3>Member Registration</h3>
+                        <div style="margin-top:1rem; display:flex; gap:0.8rem;">
+                            <a href="index.html#activities" class="btn btn-secondary">Back to Activities</a>
+                            <a href="https://forms.gle/Um23A4VsM9TAgjFY6" target="_blank" class="btn btn-primary">Apply / Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 IEEE Robotics & Automation Society Student Chapter — FSB . All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
